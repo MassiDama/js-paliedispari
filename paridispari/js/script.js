@@ -14,6 +14,11 @@ const numPc = generateRandom();
 
 console.log("Il numero scelto dal pc è: " + numPc);
 
+// sommiamo i due numeri 
+const sumNum = numPc + numUser;
+
+console.log("La somma dei due numeri è: " + sumNum);
+
 
 
 
@@ -22,5 +27,38 @@ function generateRandom() {
     const num = Math.floor(Math.random() * 5 ) + 1;
     return num;
 }
+
+// funzione che stabilisce se il numero è pari o disparo
+function pariDisparo(sumNum) {
+
+    let result;
+
+    if (sumNum % 2 === 0 ){
+
+        result = "paro";
+
+    } else {
+
+        result = "disparo";
+    }
+
+    return result;
+}
+
+let result = pariDisparo(sumNum)
+console.log("La somma dei numeri è: " + result);
+
+// andiamo a decretare il vincitore
+
+if (choice === result) {
+
+    console.log("HAI VINTO TU!");
+
+} else {
+
+    console.log("MI DISPIACE HAI PERSO!");
+
+}
+
 
 
